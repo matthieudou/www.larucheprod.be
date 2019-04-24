@@ -3,7 +3,7 @@
     <nuxt-link to="/">
       <img
         class="h-16 w-16"
-        src="@/assets/images/shared/logo-white.png"
+        src="@/assets/images/shared/logo-black.png"
         alt="Logo LaRucheProd">
     </nuxt-link>
     <div class="container max-w-lg mx-auto mt-8">
