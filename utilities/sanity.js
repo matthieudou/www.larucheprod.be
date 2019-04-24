@@ -9,6 +9,7 @@ export const client = sanityClient({
 })
 
 const generateRoutesFromSlug = (string, slugObjects) => {
+  return slugObjects.map(item => `${string}${item.slug}`)
 }
 
 const projectsQuery = `
