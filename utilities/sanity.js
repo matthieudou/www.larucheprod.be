@@ -13,7 +13,7 @@ const generateRoutesFromSlug = (string, slugObjects) => {
 }
 
 const projectsQuery = `
-*[_type == 'project']
+*[_type == 'projects']
 `
 
 export const generatedRoutes = () => {
