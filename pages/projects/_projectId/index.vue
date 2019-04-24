@@ -63,7 +63,7 @@
             project: {
               title: res.title,
               video_link: res.video_link,
-              url: `https://www.ivmovies.be/projects/${params.projectId}`,
+              url: `https://www.larucheprod.be/projects/${params.projectId}`,
               thumbnail: imageUrlBuilder(app.$sanity).image(res.thumbnail).width(1200).height(1200).url(),
               description: res.description ? toHtml({ blocks: res.description }) : '',
               strippedDescription: res.description ? striptags(toHtml({ blocks: res.description })) : ''
@@ -75,10 +75,10 @@
     methods: {
       iframeEmbedUrl (video_link) {
         const link = new URL(video_link)
-        if (link.hostname === 'youtube.com') {
+        if (link.hostname.includes('youtube.com')) {
           return 'https://www.youtube.com/embed/' + link.searchParams.get('v')
         }
-        if (link.hostname === 'vimeo.com') {
+        if (link.hostname.includes('vimeo.com')) {
           return 'https://player.vimeo.com/video/' + link.pathname.replace('/', '')
         }
       }
