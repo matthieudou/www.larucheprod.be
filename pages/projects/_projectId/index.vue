@@ -4,7 +4,7 @@
       <img
         class="h-16 w-16"
         src="@/assets/images/shared/logo-white.png"
-        alt="Logo ivmovies">
+        alt="Logo LaRucheProd">
     </nuxt-link>
     <div class="container max-w-lg mx-auto mt-8">
       <no-ssr placeholder="Loading...">
@@ -63,7 +63,7 @@
             project: {
               title: res.title,
               video_link: res.video_link,
-              url: `https://www.larucheprod.be/projects/${params.projectId}`,
+              url: `https://www.LaRucheProd.be/projects/${params.projectId}`,
               thumbnail: imageUrlBuilder(app.$sanity).image(res.thumbnail).width(1200).height(1200).url(),
               description: res.description ? toHtml({ blocks: res.description }) : '',
               strippedDescription: res.description ? striptags(toHtml({ blocks: res.description })) : ''

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-screen overflow-hidden">
+  <section class="relative h-screen overflow-hidden text-white">
     <video
       class="absolute w-full h-full bg-video hidden md:block"
       autoplay
@@ -23,7 +23,7 @@
           <img
             class="h-16 w-16 lg:h-24 lg:w-24"
             src="@/assets/images/shared/logo-white.png"
-            alt="Logo ivmovies">
+            alt="Logo LaRucheProd">
         </nuxt-link>
       </div>
 
@@ -31,18 +31,18 @@
       <div class="flex justify-center items-center">
         <div class="max-w-lg text-center font-light">
           <!-- TITLE -->
-          <h1 class="font-hairline tracking-extra leading-loose text-5xl uppercase">IVmovies</h1>
+          <h1 class="font-hairline tracking-extra leading-loose text-5xl">LaRucheProd</h1>
 
           <!-- DESCRIPTION -->
-          <p class="leading-loose text-lg">worldwide visual content creator based in belgium</p>
-          <p class="leading-loose text-lg">outdoor sports • corporate • event • music</p>
+          <p class="leading-loose text-lg">Belgium clipmakers and photographers based in Brussels.</p>
+          <p class="leading-loose text-lg">music • event</p>
 
           <!-- BUTTONS -->
           <div class="flex mt-8 justify-center text-sm">
             <button
               class="bg-white rounded-full p-4 text-second mx-4 font-bold flex items-center icon-animation"
               v-scroll-to="'#projects'">
-              <span class="mx-2">My work</span>
+              <span class="mx-2">Our work</span>
               <svg
                 class="fill-current w-4 h-4 mx-2"
                 xmlns="http://www.w3.org/2000/svg"

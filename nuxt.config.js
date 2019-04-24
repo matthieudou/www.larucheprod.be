@@ -7,17 +7,17 @@ export default {
   },
 
   head: {
-    title: 'Larucheprod',
+    title: 'LaRucheProd',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Larucheprod portfolio' },
+      { hid: 'description', name: 'description', content: 'LaRucheProd portfolio' },
       { hid: 'keywords', name: 'keywords', content: 'video movie film imbaud verhaegen' },
       { hid: 'theme-color', name: 'theme-color', content: '#EEE' },
       { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
       { hid: 'apple-mobile-web-app-status-bar-style', name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       // OPEN GRAPH
-      { hid: 'og:title', property: 'og:title', content: 'Larucheprod' },
+      { hid: 'og:title', property: 'og:title', content: 'LaRucheProd' },
       { hid: 'og:description', property: 'og:description', content: 'Worldwide visual content creator based in belgium' },
       { hid: 'og:type', property: 'og:type', content: 'video.movie' },
       { hid: 'og:url', property: 'og:url', content: 'https://www.larucheprod.be' },
@@ -73,7 +73,7 @@ export default {
 
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://larucheprod.be',
+    hostname: 'https://LaRucheProd.be',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate

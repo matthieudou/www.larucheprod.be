@@ -14,7 +14,7 @@
           :style="`background-image: url(${imageUrlFor(project.thumbnail).width(600)})`"
         >
           <div class="absolute pin flex items-center justify-center content p-4">
-            <h2 class="bg-main text-white py-2 px-4 rounded-full font-light text-base">{{ project.title }}</h2>
+            <h2 class="bg-main text-black py-2 px-4 rounded-full font-light text-base">{{ project.title }}</h2>
           </div>
         </div>
       </nuxt-link>

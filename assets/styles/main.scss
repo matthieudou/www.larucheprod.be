@@ -6,4 +6,8 @@ a {
   @apply .no-underline .text-second;
 }
 
+.transition {
+  transition: .2s ease-in-out;
+}
+
 @tailwind utilities;
