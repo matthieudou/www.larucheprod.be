@@ -1,17 +1,30 @@
-import sanityClient from '@sanity/client'
+const sanityClient = require('@sanity/client')
+require('dotenv').config()
 
-export const config = sanityClient({
-  // Find your project ID and dataset in `sanity.json` in your studio project
-  projectId: 'kk94o35r',
-  dataset: 'projects',
-  useCdn: true
+export const client = sanityClient({
+  projectId: process.env.SANITY_PROJECT_ID || process.env.sanityProjectId,
+  dataset: process.env.NODE_ENV,
+  token: '',
+  useCdn: process.env.NODE_ENV === 'production'
 })
 
-export const sanity = {
-  install (Vue) {
-    Vue.prototype.$sanity = config
-    Vue.$sanity = config
-  }
+const generateRoutesFromSlug = (string, slugObjects) => {
+  return slugObjects.map(item => `${string}${item.slug}`)
 }
 
-export default sanity
+const projectsQuery = `
+*[_type == 'project']
+`
+
+export const generatedRoutes = () => {
+  const promises = [
+    client.fetch(projectsQuery)
+  ]
+
+  return Promise.all(promises)
+    .then(([projectsResponse]) => {
+      return [
+        ...generateRoutesFromSlug('/projects/', projectsResponse)
+      ]
+    })
+}

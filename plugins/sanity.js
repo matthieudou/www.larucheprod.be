@@ -1,8 +1,15 @@
 import Vue from 'vue'
-import { sanity, config } from '~/utilities/sanity'
+import { client } from '~/utilities/sanity'
 
-Vue.use(sanity)
+const installSanity = {
+  install (vue) {
+    vue.$sanity = client
+    vue.prototype.$sanity = client
+  }
+}
+
+Vue.use(installSanity)
 
 export default ({ app }) => {
-  app.$sanity = config
+  app.$sanity = client
 }

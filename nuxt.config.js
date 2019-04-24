@@ -1,26 +1,17 @@
-import { config as sanity } from './utilities/sanity'
-
-const routesQuery = `*[_type == "projects"] {
-  "slug": slug.current
-}`
-
-const paths = sanity.fetch(routesQuery)
-  .then(res => {
-    const projects = res.map(project => `/projects/${project.slug}`)
-    return [
-      '/',
-      '/projects',
-      ...projects
-    ]
-  })
+import { generatedRoutes } from './utilities/sanity'
+require('dotenv').config()
 
 export default {
+  env: {
+    sanityProjectId: process.env.SANITY_PROJECT_ID
+  },
+
   head: {
-    title: 'IVMOVIES',
+    title: 'Larucheprod',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'IV Movies portfolio' },
+      { hid: 'description', name: 'description', content: 'Larucheprod portfolio' },
       { hid: 'keywords', name: 'keywords', content: 'video movie film imbaud verhaegen' },
       { hid: 'theme-color', name: 'theme-color', content: '#EEE' },
       { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
@@ -59,7 +50,7 @@ export default {
 
   generate: {
     routes () {
-      return paths
+      return generatedRoutes
     }
   },
 
@@ -73,6 +64,10 @@ export default {
           exclude: /(node_modules)/
         })
       }
+
+      config.node = {
+        fs: 'empty'
+      }
     }
   },
 
@@ -84,7 +79,7 @@ export default {
     generate: true, // Enable me when using nuxt generate
     exclude: [],
     routes () {
-      return paths
+      return generatedRoutes
     }
   }
 }
