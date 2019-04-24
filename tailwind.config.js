@@ -44,7 +44,7 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   'transparent': 'transparent',
 
-  'main': '#111',
+  'main': '#EEE',
   'second': '#FF7E67',
 
   'black': '#111',

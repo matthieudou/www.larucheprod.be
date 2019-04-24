@@ -108,7 +108,7 @@
 }
 
 .bg-linear {
-  background-image: linear-gradient(rgba(#111, 0), rgba(#111, 1));
+  background-image: linear-gradient(to bottom, rgba(#EEE, 0) 30%, rgba(#EEE, 1) 100%);
 }
 
 button:focus {
