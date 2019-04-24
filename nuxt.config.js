@@ -50,7 +50,7 @@ export default {
 
   generate: {
     routes () {
-      return generatedRoutes
+      return generatedRoutes()
     }
   },
 
@@ -79,7 +79,7 @@ export default {
     generate: true, // Enable me when using nuxt generate
     exclude: [],
     routes () {
-      return generatedRoutes
+      return generatedRoutes()
     }
   }
 }

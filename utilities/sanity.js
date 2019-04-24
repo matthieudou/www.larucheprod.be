@@ -9,11 +9,12 @@ export const client = sanityClient({
 })
 
 const generateRoutesFromSlug = (string, slugObjects) => {
-  return slugObjects.map(item => `${string}${item.slug}`)
 }
 
 const projectsQuery = `
-*[_type == 'projects']
+*[_type == "projects"] {
+  "slug": slug.current
+}
 `
 
 export const generatedRoutes = () => {
