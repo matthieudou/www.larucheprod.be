@@ -4,7 +4,7 @@ import RavenVue from 'raven-js/plugins/vue'
 
 if (process.env.NODE_ENV === 'production') {
   Raven
-    .config('https://c03d517eceb94f2799983fc43322b51a@sentry.io/1264712')
+    .config('https://b487d0659d5a44a1bb069f4718a4a790@sentry.io/1445952')
     .addPlugin(RavenVue, Vue)
     .install()
 }
